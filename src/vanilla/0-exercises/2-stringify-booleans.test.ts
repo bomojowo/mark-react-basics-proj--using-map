@@ -16,5 +16,5 @@ describe("stringifyBoolean - takes the string or Boolean representation of a Boo
 test("stringifyBooleans - takes an array of strings or Booleans, and returns an array of stringified Booleans", () => {
   expect(
     stringifyBooleans(["hello world", true, "true", false, "false"])
-  ).toStrictEqual(["hello world", "true", "true", "false", "false"]);
+  ).toStrictEqual(["hello world", "T", "true", "F", "false"]);
 });
