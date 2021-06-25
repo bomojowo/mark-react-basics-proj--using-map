@@ -3,6 +3,14 @@ interface AnimalSound {
   sound: string;
 }
 
-export function animalSounds(arr: AnimalSound[]): string[] {
-  return arr.map((element) => `A ${element.animal} goes: "${element.sound}!"`);
+function animalSounds(arr: AnimalSound[]): string[] {
+  let animal: AnimalSound = {
+    animal: 'horse',
+    sound: 'neigh'
+  }
+  let tellMeABoutAnimal = (element: AnimalSound) => `A ${element.animal} goes: "${element.sound}!"`
+  console.log(tellMeABoutAnimal(animal))
+  return arr.map(tellMeABoutAnimal);
 }
+
+export {animalSounds};
